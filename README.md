@@ -1,6 +1,10 @@
-# Frontend
+# Application Localize Me!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.26.
+## Technologies utilisées
+-> NodeJs 12.16.1
+-> Angular 8.3.26
+-> mongoDB(avec le drive Mongoose)
+-> API GoogleMap
 
 ## Lancement du frontenf en mode développement
 
@@ -9,5 +13,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Lancement du serveur(backend)
 `node backend/app.js` il écoute sur le port 3000
 
-## Technologies utilisées
-.
+
