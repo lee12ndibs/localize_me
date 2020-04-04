@@ -6,7 +6,7 @@
 - **mongoDB(avec le drive Mongoose)**
 - **API GoogleMap**
 
-## Lancement du frontenf en mode développement
+## Lancement du frontend en mode développement
 
 `ng server --open` lancé sur le port 4200
 
