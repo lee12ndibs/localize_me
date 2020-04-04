@@ -1,10 +1,10 @@
 # Application Localize Me!
 
 ## Technologies utilisées
-- **NodeJs 12.16.1
-- **Angular 8.3.26
-- **mongoDB(avec le drive Mongoose)
-- **API GoogleMap
+- **NodeJs 12.16.1**
+- **Angular 8.3.26**
+- **mongoDB(avec le drive Mongoose)**
+- **API GoogleMap**
 
 ## Lancement du frontenf en mode développement
 
