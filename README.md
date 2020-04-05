@@ -9,7 +9,8 @@
 
 ## Configuration de l'environnement
 
-```cd fontend̀
+```
+cd fontend̀
 npm install
 npm install backend
 ```
