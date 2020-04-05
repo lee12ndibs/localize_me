@@ -38,7 +38,7 @@ export class UpdateComponent implements OnInit {
         password : ["", Validators.required],
     });
    
-    this.registerForm.patchValue({prenom:this.currentUser.prenom, nom:this.currentUser.nom})
+    // this.registerForm.patchValue({prenom:this.currentUser.prenom, nom:this.currentUser.nom})
   }
   // getter pour le formulaire
   get f() { return this.registerForm.controls; }
