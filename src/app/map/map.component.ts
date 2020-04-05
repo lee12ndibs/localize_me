@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../modeles/user';
 import { first } from 'rxjs/operators';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-map',
