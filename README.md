@@ -10,7 +10,7 @@
 ## Configuration de l'environnement
 
 ```
-cd fontend̀
+cd localize_me
 npm install
 npm install backend
 ```
