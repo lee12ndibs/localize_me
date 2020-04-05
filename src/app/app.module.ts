@@ -27,13 +27,13 @@ import { MapComponent } from './map/map.component';
   ],
   imports: [
     BrowserModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        AppRoutingModule,
-        AgmCoreModule.forRoot({
-          apiKey: 'AIzaSyBYb_Ku6cIWkJnHib3-U-UqG_AC85egr2I'
-          
-        })
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBYb_Ku6cIWkJnHib3-U-UqG_AC85egr2I'
+      
+    })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

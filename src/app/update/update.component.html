@@ -2,14 +2,14 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="prenom">prenom</label>
-        <input type="text" formControlName="prenom" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }" />
+        <input type="text" formControlName="prenom" class="form-control" [(ngModel)]="currentUser.prenom"[ngClass]="{ 'is-invalid': submitted && f.prenom.errors }" />
         <div *ngIf="submitted && f.prenom.errors" class="invalid-feedback">
             <div *ngIf="f.prenom.errors.required">prenom est requis</div>
         </div>
     </div>
     <div class="form-group">
         <label for="nom">nom</label>
-        <input type="text" formControlName="nom" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" />
+        <input type="text" formControlName="nom" class="form-control" [(ngModel)]="currentUser.nom" [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" />
         <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
             <div *ngIf="f.nom.errors.required">nom est requis</div>
         </div>
