@@ -9,10 +9,10 @@
 
 ## Configuration de l'environnement
 
-`cd fontend
-npm install 
+```cd fontend̀
+npm install
 npm install backend
-`
+```
 
 ## Lancement du frontend en mode développement
 
