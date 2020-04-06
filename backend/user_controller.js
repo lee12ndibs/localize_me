@@ -12,6 +12,7 @@ router.get('/:id', getById);
 router.put('/:id', update);
 router.delete('/:id', _delete);
 router.post('/add_ami', add_ami);
+router.post('/del_ami', del_ami)
 
 
 module.exports = router;
@@ -76,6 +77,14 @@ function updatePosition(req, res, next){
 function add_ami(req, res, next){
     console.log("ajout_ami")
     userService.add_ami(req.body)
+        .then(() => res.json({}))
+        .catch(err => next(err));
+}
+
+
+function del_ami(req, res, next){
+    console.log("del_ami")
+    userService.del_ami(req.body)
         .then(() => res.json({}))
         .catch(err => next(err));
 }

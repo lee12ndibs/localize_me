@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
     currentUser: User;
     users = [];
     infoCurrentUser:User;
-
+    loading = false;
     constructor(
         private authenticationService: AuthenticationService,
         private userService: UserService,
@@ -73,8 +73,18 @@ export class HomeComponent implements OnInit {
             .subscribe(() => {
                 this.loadAllUsers()
                 this.router.navigate(['home'])})
-           
+                this.loading = true;
     }
+
+    del_ami(id:number, id_ami:number){
+
+        this.amisService.del_ami(id, id_ami)
+        .pipe(first())
+        .subscribe(() => {
+            this.loadAllUsers()
+            this.router.navigate(['home'])})
+            this.loading = true;
+}
 
    
    

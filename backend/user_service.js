@@ -12,7 +12,8 @@ module.exports = {
     update,
     delete: _delete,
     setPosition,
-    add_ami
+    add_ami,
+    del_ami
 };
 
 async function auth({ login, password }) {
@@ -84,11 +85,18 @@ async function add_ami({id, id_ami}) {
     user.amis.push(id_ami);
     user.save();  
 
-    // user = await User.findById(id_ami);
-    // user.amis.push(id);
-    // user.save(); 
+}
+
+
+async function del_ami({id, id_ami}) {
+    console.log(id + " " + id_ami)
+    let user = await User.findById(id);
+    user.amis = user.amis.filter( id_a =>{ id_a != id_ami})
+    user.save();  
 
 }
+
+
 
 
 

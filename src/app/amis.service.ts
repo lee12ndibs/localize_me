@@ -13,5 +13,9 @@ export class AmisService {
 
     return this.http.post(`${config.apiUrl}/users/add_ami`, {id, id_ami})
   }
+  del_ami(id: number, id_ami:number){
+
+    return this.http.post(`${config.apiUrl}/users/del_ami`, {id, id_ami})
+  }
 
 }
