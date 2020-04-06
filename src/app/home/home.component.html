@@ -6,23 +6,32 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Pseudo</th>
         <th scope="col">Nom</th>
         <th scope="col">Prenom</th>
         <th scope="col">latitude</th>
         <th scope="col">longitude</th>
+        <th scope="col-sm-6" >ami</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users; let i = index">
-        <td>{{i+1}}</td>
+      <tr  *ngFor="let user of users; let i = index">
+        <th  >{{i+1}}</th>
         <td>{{user.login}}</td>
        <td>{{user.prenom}}</td>
        <td>{{user.nom}}</td>
        <td>{{user.latitude}}</td>
        <td>{{user.longitude}}</td>
+       <td *ngIf="(infoCurrentUser|isAmi:user.id) == true"> Déja ami(e) </td>
+       <td *ngIf="(infoCurrentUser|isAmi:user.id) == false"> 
+        <button (click)="add_ami(currentUser._id, user.id)" [disabled]="loading" class="btn btn-primary">
+          <span   *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          devenir amis
+      </button>
+       </td>
        <td> <a (click)="deleteUser(user.id)" class="text-danger">Delete</a></td>
+      
+
     </tr>
     </tbody>
   </table>

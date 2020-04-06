@@ -4,6 +4,7 @@
     <a class="nav-item nav-link" routerLink="/" *ngIf="currentUser">Home</a>
     <a class="nav-item nav-link" style="position: absolute;right:5px;" (click)="logout()" *ngIf="currentUser">Se déconnecter </a> 
     <a class="nav-item nav-link" routerLink="update" *ngIf="currentUser">Modifier compte </a> 
+    <a class="nav-item nav-link" routerLink="liste_amis" *ngIf="currentUser">Liste des amis </a> 
     <a class="nav-item nav-link" routerLink="map" *ngIf="currentUser">Map</a> 
   </div>
 

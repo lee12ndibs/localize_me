@@ -12,6 +12,7 @@ module.exports = {
     update,
     delete: _delete,
     setPosition,
+    add_ami
 };
 
 async function auth({ login, password }) {
@@ -76,6 +77,21 @@ async function update(id, userParam) {
 
     await user.save();
 }
+
+async function add_ami({id, id_ami}) {
+    console.log(id + " " + id_ami)
+    let user = await User.findById(id);
+    user.amis.push(id_ami);
+    user.save();  
+
+    // user = await User.findById(id_ami);
+    // user.amis.push(id);
+    // user.save(); 
+
+}
+
+
+
 
 async function _delete(id) {
     await User.findByIdAndRemove(id);

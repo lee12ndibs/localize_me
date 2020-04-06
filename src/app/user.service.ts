@@ -19,7 +19,7 @@ export class UserService {
     delete(id: number) {
         return this.http.delete(`${config.apiUrl}/users/${id}`);
     }
-    getById(id: number){
+    getById(id: string){
         return this.http.get<User>(`${config.apiUrl}/users/${id}`)
     }
     update(id , nom, prenom){

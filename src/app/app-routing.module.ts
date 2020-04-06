@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
 import { AuthGuard } from './auth.guard';
 import { MapComponent } from './map/map.component';
+import { ListAmisComponent } from './list-amis/list-amis.component'
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'update', component:UpdateComponent, canActivate: [AuthGuard]},
     { path: 'map', component:MapComponent, canActivate: [AuthGuard]},
+    { path: 'liste_amis', component:ListAmisComponent, canActivate: [AuthGuard]},
     { path: '**', redirectTo: '' }
 ];
 

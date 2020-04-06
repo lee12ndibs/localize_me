@@ -8,7 +8,8 @@ const schema = new Schema({
     login : { type: String, required: true },
     date_creation: { type: Date, default: Date.now },
     latitude:{ type: String, default:""},
-    longitude:{ type: String, default:""}
+    longitude:{ type: String, default:""},
+    amis:{type : Array, default:[]}
 });
 
 schema.set('toJSON', { virtuals: true });

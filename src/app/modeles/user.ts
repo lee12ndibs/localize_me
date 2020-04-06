@@ -6,5 +6,6 @@ export class User {
     password: string;
     latitude:string;
     longitude:string;
+    amis:string[];
     token: string;
 }
