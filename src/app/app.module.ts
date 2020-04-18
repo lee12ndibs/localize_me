@@ -15,7 +15,6 @@ import { UpdateComponent } from './update/update.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './map/map.component';
 import { IsAmi } from './is-ami.pipe';
-import { ListAmisComponent } from './list-amis/list-amis.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,7 @@ import { ListAmisComponent } from './list-amis/list-amis.component';
     RegisterComponent,
     UpdateComponent,
     MapComponent,
-    IsAmi,
-    ListAmisComponent
+    IsAmi
   ],
   imports: [
     BrowserModule,

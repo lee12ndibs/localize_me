@@ -1,8 +1,8 @@
-import { IsAmiPipe } from './is-ami.pipe';
+import { IsAmi } from './is-ami.pipe';
 
-describe('IsAmiPipe', () => {
+describe('IsAmi', () => {
   it('create an instance', () => {
-    const pipe = new IsAmiPipe();
+    const pipe = new IsAmi;
     expect(pipe).toBeTruthy();
   });
 });

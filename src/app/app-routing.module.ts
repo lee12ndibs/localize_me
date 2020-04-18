@@ -2,19 +2,27 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { UpdateComponent } from './update/update.component';
 import { AuthGuard } from './auth.guard';
-import { MapComponent } from './map/map.component';
-import { ListAmisComponent } from './list-amis/list-amis.component'
+
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'update', component:UpdateComponent, canActivate: [AuthGuard]},
-    { path: 'map', component:MapComponent, canActivate: [AuthGuard]},
-    { path: 'liste_amis', component:ListAmisComponent, canActivate: [AuthGuard]},
+    { path: 'register', 
+        loadChildren: ()=> import('./register/register.module')
+        .then(m => m.RegisterModule)
+    },
+    { path: 'update',  
+        loadChildren: ()=> import('./update/update.module')
+        .then(m => m.UpdateModule)
+        },
+    { path: 'map', 
+        loadChildren: ()=> import('./map/map.module')
+        .then(m => m.MapModule)},
+    { path: 'liste_amis', 
+        loadChildren: ()=> import('./list-amis/list-amis.module')
+        .then(m => m.ListAmisModule)
+        },
     { path: '**', redirectTo: '' }
 ];
 

@@ -91,7 +91,13 @@ async function add_ami({id, id_ami}) {
 async function del_ami({id, id_ami}) {
     console.log(id + " " + id_ami)
     let user = await User.findById(id);
-    user.amis = user.amis.filter( id_a =>{ id_a != id_ami})
+    let index = user.amis.indexOf(id_ami)
+    let new_amis = user.amis;
+    
+    delete new_amis[index]
+    
+    // let new_amis = user.amis.filter( id_a =>{ id_a !== id_ami})
+    user.amis = new_amis
     user.save();  
 
 }

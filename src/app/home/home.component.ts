@@ -73,17 +73,17 @@ export class HomeComponent implements OnInit {
             .subscribe(() => {
                 this.loadAllUsers()
                 this.router.navigate(['home'])})
-                this.loading = true;
     }
 
     del_ami(id:number, id_ami:number){
-
+        this.loading = true;
         this.amisService.del_ami(id, id_ami)
         .pipe(first())
         .subscribe(() => {
             this.loadAllUsers()
-            this.router.navigate(['home'])})
-            this.loading = true;
+            this.router.navigate(['home'])
+            this.loading = false;})
+            
 }
 
    
