@@ -23,13 +23,13 @@
        <td>{{user.latitude}}</td>
        <td>{{user.longitude}}</td>
        <td *ngIf="(infoCurrentUser|isAmi:user.id) == true">
-        <button (click)="del_ami(currentUser._id, user.id)" [disabled]="loading" class="btn btn-warning">
+        <button (click)="del_ami(currentUser['_id'], user.id)" [disabled]="loading" class="btn btn-warning">
           <span   *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
           ne plus être amis
       </button>
      </td>
        <td *ngIf="(infoCurrentUser|isAmi:user.id) == false"> 
-        <button (click)="add_ami(currentUser._id, user.id)" [disabled]="loading" class="btn btn-primary">
+        <button (click)="add_ami(currentUser['_id'], user.id)" [disabled]="loading" class="btn btn-primary">
           <span   *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
           devenir amis
       </button>
