@@ -10,10 +10,6 @@ import { AppComponent } from './app.component';
 import { AlertComponent } from './alert/alert.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { UpdateComponent } from './update/update.component';
-import { AgmCoreModule } from '@agm/core';
-import { MapComponent } from './map/map.component';
 import { IsAmi } from './is-ami.pipe';
 
 @NgModule({
@@ -22,9 +18,6 @@ import { IsAmi } from './is-ami.pipe';
     AlertComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent,
-    UpdateComponent,
-    MapComponent,
     IsAmi
   ],
   imports: [
@@ -32,10 +25,7 @@ import { IsAmi } from './is-ami.pipe';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBYb_Ku6cIWkJnHib3-U-UqG_AC85egr2I'
-      
-    })
+    
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

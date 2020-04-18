@@ -1,6 +1,5 @@
 <agm-map
-[latitude]="latitude"
-[longitude]="longitude"
+
 [zoom]="2"
 (mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
 >
@@ -17,3 +16,5 @@
 <p *ngIf="selectedMarker">
 latitude: {{selectedMarker.longitude}} longitude: {{selectedMarker.longitude}}
 </p>
+<!-- [latitude]="latitude"
+[longitude]="longitude" -->

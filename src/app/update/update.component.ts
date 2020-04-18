@@ -6,7 +6,6 @@ import { AuthenticationService } from '../authentication.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
