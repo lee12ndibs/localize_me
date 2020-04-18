@@ -21,7 +21,7 @@ import { IsAmi } from './is-ami.pipe';
     IsAmi
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
