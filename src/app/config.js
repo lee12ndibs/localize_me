@@ -1,3 +1,3 @@
 export let config = {
-    apiUrl: "http://localhost:3000"
+    apiUrl: "http:///54.37.10.170:3000"
 }
