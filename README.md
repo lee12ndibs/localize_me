@@ -15,7 +15,7 @@ npm install
 npm install backend
 ```
 
-## Lancement du frontend en mode développement
+## Lancement du localize_me en mode développement
 
 `ng server --open` lancé sur le port 4200
 
