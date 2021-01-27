@@ -1,2 +1,4 @@
 <?php echo "jude";
-system('ls');
+
+show_source("index.php");
+getcwd();
