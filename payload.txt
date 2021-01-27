@@ -1,2 +1,2 @@
 <?php echo "jude";
-show_source("index.php");
+system('ls');
